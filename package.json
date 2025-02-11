@@ -6,10 +6,13 @@
     "dev": "next dev",
     "dev:socket": " set NODE_OPTIONS=--loader ts-node/esm --trace-warnings && ts-node server.mts",
     "build": "next build",
+    "build:socket": "next build && tsc --project tsconfig.server.json",
     "start": "next start",
+    "start:socket": "cross-env NODE_ENV=production node dist/server.mjs",
     "lint": "next lint"
   },
   "dependencies": {
+    "cross-env": "^7.0.3",
     "next": "15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
