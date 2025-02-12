@@ -55,7 +55,7 @@ export default function Home() {
           > Join Room</button>
         </div>
       ) : (<div className="w-full max-w-3xl mx-auto">
-        <h1 className="mb-4 text-2xl font-bold">Room: {room}</h1>
+        <h1 className="mb-4 text-2xl border-b-2">Room : <span className="text-lg"> {room}</span></h1>
         <div className="h-[500px] overflow-y-auto p-4 mb-4 bg-gray-200 border-2 rounded-lg">
           {messages.map((msg, i) => (
             <ChatMessage key={i}
